@@ -14,14 +14,18 @@ const karla = Karla({
   weight: ["400", "500", "600", "700"],
 });
 
+const SITE_URL = "https://innovators.okoasem.app";
+const SITE_TITLE = "Science Innovators Club — Meru University";
+const SITE_DESCRIPTION =
+  "One KES 100 membership unlocks every interest group's WhatsApp for the semester — Android, Cyber Security, Web Development, Data Science, Robotics & IoT, and UI/UX Design.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://meruinnovators.club"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Science Innovators Club — Meru University",
+    default: SITE_TITLE,
     template: "%s · Science Innovators Club",
   },
-  description:
-    "Join Meru University Science Innovators Club for KES 100 a semester and unlock every interest group's WhatsApp — Android, Cyber Security, Web Development, Data Science, Robotics & IoT, and UI/UX Design.",
+  description: SITE_DESCRIPTION,
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -32,9 +36,17 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.webmanifest",
   openGraph: {
-    title: "Science Innovators Club — Meru University",
-    description:
-      "One KES 100 membership unlocks every interest group's WhatsApp for the semester.",
+    type: "website",
+    url: "/",
+    siteName: SITE_TITLE,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: [{ url: "/brand/lockup-900.png", width: 900, height: 899, alt: "Science Innovators Club" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     images: ["/brand/lockup-900.png"],
   },
 };
