@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-cream: #fbf7f0;
+  --color-cream-deep: #f5eee0;
+  --color-paper: #ffffff;
+  --color-ink: #2b2724;
+  --color-ink-soft: #6e675d;
+  --color-ink-faint: #78705f;
+  --color-line: #e8e0d0;
+  --color-blue: #0071bc;
+  --color-blue-deep: #00588f;
+  --color-blue-tint: #e8f1fa;
+  --color-pink: #eb008b;
+  --color-pink-deep: #b8006d;
+  --color-yellow: #fddd17;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-deep: #1da851;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: var(--font-fredoka);
+  --font-body: var(--font-karla);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: var(--color-yellow);
+  color: var(--color-ink);
 }
