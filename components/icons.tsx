@@ -195,11 +195,35 @@ function UiUxIcon(props: IconProps) {
   );
 }
 
+function GraphicsDesignIcon(props: IconProps) {
+  return base(
+    props,
+    <>
+      <circle cx="8.5" cy="8.5" r="4.5" />
+      <circle cx="15.5" cy="15.5" r="4.5" />
+    </>
+  );
+}
+
+function BlockchainIcon(props: IconProps) {
+  return base(
+    props,
+    <>
+      <rect x="3.5" y="3.5" width="6" height="6" rx="1" />
+      <rect x="14.5" y="3.5" width="6" height="6" rx="1" />
+      <rect x="9" y="14.5" width="6" height="6" rx="1" />
+      <path d="M9.5 6.5H14.5M6.5 9.5V14.5L9.5 17M17.5 9.5V14.5L14.5 17" />
+    </>
+  );
+}
+
 export const GROUP_ICONS: Record<GroupSlug, (props: IconProps) => React.JSX.Element> = {
   android: AndroidIcon,
   "cyber-security": CyberSecurityIcon,
   "web-development": WebDevIcon,
-  "data-science": DataScienceIcon,
+  "machine-learning": DataScienceIcon,
   "robotics-iot": RoboticsIcon,
   "ui-ux-design": UiUxIcon,
+  "graphics-design": GraphicsDesignIcon,
+  blockchain: BlockchainIcon,
 };
